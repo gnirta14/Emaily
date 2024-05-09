@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "20.12.2",
+    "npm": "10.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "RWasync": "nodemon RWasync.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-session": "^2.1.0",
+    "express": "^4.19.2",
+    "mongodb": "^6.6.1",
+    "mongoose": "^8.3.4",
+    "passport": "^0.5.3",
+    "passport-google-oauth20": "^2.0.0"
+  }
+}
