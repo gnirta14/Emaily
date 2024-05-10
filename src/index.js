@@ -10,7 +10,6 @@ import {keys} from '../config/keys.js'
 mongoose.connect(keys.mongoURI)
 
 const app = express()
-authRoutes(app)
 
 // enable cookies with 30 day life and encrypt with our "cookieKey"
 app.use(
@@ -22,6 +21,9 @@ app.use(
 
 app.use(passport.initialize())
 app.use(passport.session())
+
+// endpoint routes need to come after cookie/passport initialization
+authRoutes(app)
 
 const PORT = process.env.PORT || 5000
 console.log('Listening on ......',PORT)
